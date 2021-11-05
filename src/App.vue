@@ -4,18 +4,21 @@
       <v-toolbar-title>Candidate Overview</v-toolbar-title>
     </v-app-bar>
     <v-main>
-      <candidate-overview></candidate-overview>
+      <LoadMore />
+      <!-- <Employees /> -->
     </v-main>
   </v-app>
 </template>
 
 <script>
-import CandidateOverview from "./components/CandidateOverview";
+import LoadMore from "./components/LoadMore";
+// import Employees from "./components/Employees";
 
 export default {
   name: "App",
   components: {
-    CandidateOverview,
+    LoadMore,
+    // Employees,
   },
 };
 </script>

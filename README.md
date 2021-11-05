@@ -1,76 +1,43 @@
-# CAREERSTEAM Case Study Description
+# TODOs
+- TODO 1: Load more section
+- TODO 2: Aria-labels Concept
 
-## What the Application does
+## TODO 1: Load more section
+In the empty load_more section ```/src/components/load_more``` make a component (you can also make your own sub-components to include in this component) that does the following:
 
-- A web page that Parsed and loaded all the Candidate List from a provided API into a List, containing Full name, Job title, Number, and email address, that is paginated 10 item per page.
-- The Design of the Candidate Card was Implemented by me using Figma.
+The new component should have at least 22 [cards](https://www.w3schools.com/howto/howto_css_cards.asp), each with its own text and button (you may use the example button already in the components directory), with 3 cards per row on desktop and 1 card per row on mobile.
 
-## Technologies
+The initial view of the component should only show 3 cards and a "load more" button.
+Each card should have a headline, text, button and also a box shadow on hover. The design of the component is up to you.
 
-- Vue
-- Vuex
-- JavaScript
-- Vuetify
+The "load more" function should be handled with javascript and should show the next 6 items every time the button is clicked.
+The "load more" button should disappear once all cards are loaded.
 
+AC:
 
-## Project Installation
+- Card Headline (h2)
+- Card Text (p)
+- Card Button (link)
+- Shadow on hover over card
+- "Load more" button
+- Load 6 more cards on button click
+- Button disappears when all cards are loaded
 
-```bash
-git clone https://github.com/Rottabx/ctg.git
-cd ctg
-yarn 
-```
+## TODO 2: Aria-labels Concept
+Write a basic concept for adding [aria roles and labels](https://www.w3.org/TR/html-aria/) to our components, so that users with disabilities can also use them. The method is entirely up to you.
 
-## To Start the App
+## TODO 3: Employees component
+```/src/components/employees```: Make a component that does the following:
 
-```bash
-yarn serve
-```
+The component should pull data from the given API (in this case it's dummy employee data: http://dummy.restapiexample.com/api/v1/employees).
 
-## For Building
+The data should be displayed in a carousel (you can create your own, or install a carousel library from npm), with 3 employees per slide and arrows to navigate through the slides.
 
-```bash
-yarn build
-```
+There should be one or two dropdowns/selects (the position is up to you) with options to filter the visible employees by age (for example 20-30, 31-40, 41-50) and/or by salary (for example 80,000-100,000, 100,001-200,000, 200,001-300,000).
 
-## Usage
+AC:
 
-Used Vuetify as a Component Library.
-
-## Project Hierarchy
-```bash
-  ctg    
-    ├─ public
-    │  ├─ favicon.ico
-    │  ├─ index.html
-    ├─ src                   
-    │  ├─ assets
-    │  │  ├─ logo.png     
-    │  │  ├─ logo.svg         
-    │  ├─ components         
-    │  │  ├─ CandidateOverview.vue      
-    │  ├─ plugins              
-    │  │  └─ vuetify.js  
-    │  ├─ store    
-    │  │  └─ modules
-    │  │     └─ candidates.js                
-    │  │  └─ index.js        #
-    │  │─ App.vue
-    │  │─ main.js
-    ├─ .gitignore 
-    ├─ node_modules
-    ├─ package.json
-    ├─ babel.config.js
-    ├─ package-lock.json
-    ├─ README.md
-    └─ yarn.lock
-```
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-## Badge
-
-<a href="https://www.ctg.com/"> <img src="https://img.shields.io/badge/Mahmoud%20Rottab-CTG-red" alt="CTG" /> </a>
-  
+- Data is sorted into blocks/cards displaying all employee information
+- There are 3 employees per slide
+- There are arrows to navigate through the slides
+- There are one or two dropdowns to filter employees by age and/or salary

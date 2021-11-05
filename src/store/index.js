@@ -1,6 +1,6 @@
 import Vuex from "vuex";
 import Vue from "vue";
-import candidates from "./modules/candidates";
+import employees from "./modules/employees";
 
 // Load Vuex
 Vue.use(Vuex);
@@ -8,6 +8,6 @@ Vue.use(Vuex);
 // Create store
 export default new Vuex.Store({
   modules: {
-    candidates,
+    employees,
   },
 });
